@@ -27,7 +27,7 @@ pipeline {
         stage("Test") {
             steps {
                 echo "Running automated tests"
-                git url: "https://github.com/oyyusman/test_devops_project.git", branch: "main"
+                git url: "https://github.com/oyyusman/hotel_test_devops.git", branch: "main"
                 script {
                     docker.image("your-maven-chrome-image:latest").inside {
                         sh "mvn test"

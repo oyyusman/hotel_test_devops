@@ -2,11 +2,11 @@
 FROM markhobson/maven-chrome:latest
 
 # Set the working directory
-WORKDIR /usr/src/app
+WORKDIR /src/test/java/basicweb
 
 # Copy the POM file
 COPY pom.xml .
 
-COPY src ./src
-
+# Copy the source code
+COPY src src
 RUN mvn clean install
