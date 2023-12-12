@@ -1,0 +1,12 @@
+# Dockerfile
+FROM markhobson/maven-chrome:latest
+
+# Set the working directory
+WORKDIR /usr/src/app
+
+# Copy the POM file
+COPY pom.xml .
+
+COPY src ./src
+
+RUN mvn clean install
